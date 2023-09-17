@@ -1,5 +1,2 @@
 langchain
-selenium
-unstructured
-chromadb
 openai
