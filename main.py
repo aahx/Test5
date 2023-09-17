@@ -12,8 +12,11 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
-prospect_info = "./data/prospect_info.txt"
-company_info = "./data/company_info.txt"
+prospect_info_path = "./data/prospect_info.txt"
+company_info_path = "./data/company_info.txt"
+with open(company_info_path, "r") as file:
+    company_info = file.read()
+
 
 ################
 #    Modular - loading in data
@@ -21,7 +24,7 @@ company_info = "./data/company_info.txt"
 #    * Look into Memory *
 ################
 def get_company_data():
-    loader = TextLoader(prospect_info)
+    loader = TextLoader(prospect_info_path)
     return loader.load()
 
 data = get_company_data()
@@ -80,7 +83,7 @@ the customer instead of focusing on price or solution.
     - A 1-2 sentence description about {company}, be brief
     - End your email with a call-to-action such as asking them to set up time to talk more
 
-% YOUR RESPONSE: 
+YOUR RESPONSE: 
 """
 
 combine_prompt_template = PromptTemplate(
@@ -100,7 +103,7 @@ chain = load_summarize_chain(
     chain_type="map_reduce",
     map_prompt=map_prompt_template,
     combine_prompt=combine_prompt_template,
-    verbose=False
+    verbose=True
 )
 
 ################
