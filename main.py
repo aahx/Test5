@@ -1,13 +1,3 @@
-"""
-    Could not get UnstructuredURLLoader to work.
-    Error Message:
-        exception: Invalid file. The FileType.UNK file type is not supported in partition.
-    -- Attempted brew install libmagic
-    New Error:
-        nltk_data
-"""
-from langchain.document_loaders import UnstructuredURLLoader
-
 # Helps load pages that require JS to render
 from langchain.document_loaders import SeleniumURLLoader 
 
