@@ -12,3 +12,9 @@ List of Companies and Info about company
 
 
 // Output Marketing Email
+
+
+# Look into
+unstructured library?
+chromadb library?
+tiktoken library?

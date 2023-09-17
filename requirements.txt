@@ -1,1 +1,7 @@
 langchain
+certifi
+requests
+selenium
+unstructured
+chromadb
+openai
