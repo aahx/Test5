@@ -1,6 +1,21 @@
-# Test5
+# Overview
+
+```
+https://python.langchain.com/docs/use_cases/question_answering.html
+```
+```
+https://docs.langchain.com/docs/use-cases/qa-docs
+```
 
 
+
+
+<br>
+<br>
+<br>
+<br>
+
+### Notes for Self
 List of Companies and Info about company
 --> 
 
@@ -14,7 +29,12 @@ List of Companies and Info about company
 // Output Marketing Email
 
 
-# Look into
+#### Look into
 unstructured library?
 chromadb library?
 tiktoken library?
+
+#### More things to look into
+```
+https://github.com/techleadhd/chatgpt-retrieval
+```
