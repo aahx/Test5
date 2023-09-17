@@ -5,7 +5,7 @@
 import os
 import sys
 
-import constants
+import constants.constants as constants
 from langchain.document_loaders import TextLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.llms import OpenAI
@@ -16,7 +16,7 @@ os.environ["OPENAI_API_KEY"] = constants.APIKEY
 query = sys.argv[1]
 
 # Load Your Documents
-loader = TextLoader('./company_data.txt')
+loader = TextLoader('../data/company_data.txt')
 
 # Create Your Index
 # Analysis and Structures the Data so you can query against it
